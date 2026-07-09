@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yahyeh Abdourahman Abdi | Portfolio AI & Data Science</title>
+    
+    <!-- Meta SEO -->
+    <meta name="description" content="Portfolio professionnel de Yahyeh Abdourahman Abdi, étudiant en Intelligence Artificielle et Science des Données, développeur Python et passionné de Machine Learning.">
+    <meta name="keywords" content="Yahyeh Abdourahman Abdi, AI, Intelligence Artificielle, Data Science, Machine Learning, Python, Developer, Portfolio, CV">
+    <meta name="author" content="Yahyeh Abdourahman Abdi">
+    
+    <!-- Open Graph / LinkedIn -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yahyeh-abdi.github.io/">
+    <meta property="og:title" content="Yahyeh Abdourahman Abdi | Portfolio AI & Data Science">
+    <meta property="og:description" content="Découvrez mes compétences en Machine Learning, Python, SQL et mes projets innovants en Science des Données.">
+    <meta property="og:image" content="assets/portfolio-preview.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Yahyeh Abdourahman Abdi | Portfolio AI & Data Science">
+    <meta property="twitter:description" content="Découvrez mes compétences en Machine Learning, Python, SQL et mes projets en Science des Données.">
+    <meta property="twitter:image" content="assets/portfolio-preview.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor" id="custom-cursor"></div>
+    <div class="custom-cursor-dot" id="custom-cursor-dot"></div>
+
+    <!-- HTML5 Canvas for Neural Network Particles background -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Preloader Overlay -->
+    <div id="preloader">
+        <div class="loader-logo">Yahyeh <span>Abdourahman</span></div>
+        <div class="loader-bar-container">
+            <div class="loader-bar"></div>
+        </div>
+    </div>
+
+    <!-- ==========================================================================
+       HEADER / NAVIGATION
+       ========================================================================== -->
+    <header>
+        <div class="nav-container">
+            <a href="#hero" class="logo">
+                YAA<span>.</span>
+            </a>
+            
+            <nav>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="#hero" class="nav-link active">Accueil</a></li>
+                    <li><a href="#about" class="nav-link">À propos</a></li>
+                    <li><a href="#skills" class="nav-link">Compétences</a></li>
+                    <li><a href="#projects" class="nav-link">Projets</a></li>
+                    <li><a href="#career" class="nav-link">Parcours</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <!-- Theme toggle button -->
+                <button id="theme-toggle" class="theme-toggle" aria-label="Changer de thème">
+                    <i data-lucide="moon" class="moon-icon"></i>
+                    <i data-lucide="sun" class="sun-icon"></i>
+                </button>
+
+                <!-- Hamburger menu button -->
+                <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==========================================================================
+       HERO SECTION
+       ========================================================================== -->
+    <section id="hero">
+        <div class="hero-content animate-on-scroll">
+            <span class="hero-pretitle">Bonjour, je suis</span>
+            <h1 class="hero-name">Yahyeh <span>Abdourahman Abdi</span></h1>
+            <h2 class="hero-title">AI & Data Science Student | Machine Learning Enthusiast | Python Developer</h2>
+            <p class="hero-desc">
+                Passionné par l'extraction de connaissances à partir des données et le développement de modèles prédictifs intelligents. Prêt à relever des défis concrets dans l'industrie technologique.
+            </p>
+            <div class="hero-buttons">
+                <!-- Resume Download (Target blank placeholder for local download) -->
+                <a href="#" class="btn btn-primary" download="CV_Yahyeh_Abdourahman_Abdi.pdf">
+                    <i data-lucide="download"></i> Télécharger le CV
+                </a>
+                <a href="#projects" class="btn btn-secondary">
+                    <i data-lucide="folder-git-2"></i> Voir mes projets
+                </a>
+                <a href="#contact" class="btn btn-secondary">
+                    <i data-lucide="mail"></i> Me contacter
+                </a>
+            </div>
+        </div>
+
+        <div class="hero-visual animate-on-scroll delay-200">
+            <div class="profile-glow"></div>
+            <div class="profile-container">
+                <div class="profile-img-wrapper">
+                    <!-- Photo de profil placeholder générée -->
+                    <img src="assets/profile.png" alt="Yahyeh Abdourahman Abdi Profile Image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       ABOUT SECTION
+       ========================================================================== -->
+    <section id="about">
+        <div class="section-header animate-on-scroll">
+            <span class="section-tag">Qui suis-je</span>
+            <h2 class="section-title">À propos de moi</h2>
+            <p class="section-desc">Mon parcours et ma vision de l'intelligence artificielle appliquée.</p>
+        </div>
+
+        <div class="about-grid">
+            <div class="about-text animate-on-scroll">
+                <h3>Façonner le futur grâce aux données</h3>
+                <p>
+                    Actuellement étudiant spécialisé en <strong>Intelligence Artificielle et Science des Données</strong>, je me consacre au développement d'algorithmes et à l'analyse avancée des données pour résoudre des problématiques complexes du monde réel.
+                </p>
+                <p>
+                    Mon travail se concentre principalement sur l'écosystème <strong>Python</strong>, la modélisation statistique (Machine Learning) et la structuration des données via <strong>SQL</strong>. Curieux et rigoureux, j'aime explorer de nouvelles techniques pour optimiser les performances des modèles et créer des applications concrètes qui apportent une réelle valeur ajoutée.
+                </p>
+                <p>
+                    Mon objectif professionnel est de devenir <strong>AI Engineer</strong> et <strong>Data Scientist</strong> pour concevoir les technologies de décision de demain.
+                </p>
+
+                <div class="about-highlights">
+                    <div class="glass-card highlight-box">
+                        <i data-lucide="brain" class="highlight-icon"></i>
+                        <h4>Machine Learning</h4>
+                        <p>Modèles prédictifs supervisés et non supervisés.</p>
+                    </div>
+                    <div class="glass-card highlight-box">
+                        <i data-lucide="database" class="highlight-icon"></i>
+                        <h4>Science des Données</h4>
+                        <p>Analyse exploratoire, nettoyage et visualisation.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass-card about-skills-focus animate-on-scroll delay-200">
+                <h3>Domaines d'intérêt</h3>
+                <ul class="focus-list">
+                    <li class="focus-item">
+                        <div class="focus-bullet"></div>
+                        <span class="focus-title">Intelligence Artificielle Générative</span>
+                    </li>
+                    <li class="focus-item">
+                        <div class="focus-bullet"></div>
+                        <span class="focus-title">Apprentissage Supervisé & Scikit-learn</span>
+                    </li>
+                    <li class="focus-item">
+                        <div class="focus-bullet"></div>
+                        <span class="focus-title">Visualisation de données complexes</span>
+                    </li>
+                    <li class="focus-item">
+                        <div class="focus-bullet"></div>
+                        <span class="focus-title">Automatisation & Scripts Python</span>
+                    </li>
+                    <li class="focus-item">
+                        <div class="focus-bullet"></div>
+                        <span class="focus-title">Modélisation de bases de données relationnelles</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       SKILLS SECTION
+       ========================================================================== */ -->
+    <section id="skills">
+        <div class="section-header animate-on-scroll">
+            <span class="section-tag">Compétences</span>
+            <h2 class="section-title">Ma Boîte à Outils Technique</h2>
+            <p class="section-desc">Les langages, frameworks et outils que j'utilise au quotidien pour concevoir des projets.</p>
+        </div>
+
+        <div class="skills-container animate-on-scroll">
+            
+            <!-- Category 1: Languages -->
+            <div class="glass-card skills-category">
+                <h3 class="skills-category-title">
+                    <i data-lucide="code-2"></i> Langages
+                </h3>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <i data-lucide="code"></i>
+                        <span class="skill-name">Python</span>
+                    </div>
+                    <div class="skill-card">
+                        <i data-lucide="database"></i>
+                        <span class="skill-name">SQL</span>
+                    </div>
+                    <div class="skill-card">
+                        <i data-lucide="file-code"></i>
+                        <span class="skill-name">JavaScript</span>
+                    </div>
+                    <div class="skill-card">
+                        <i data-lucide="html5"></i>
+                        <span class="skill-name">HTML</span>
+                    </div>
+                    <div class="skill-card">
+                        <i data-lucide="css3"></i>
+                        <span class="skill-name">CSS</span>
+                    </div>
+                    <div class="skill-card">
+                        <i data-lucide="server"></i>
+                        <span class="skill-name">PHP</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 2: Frameworks & Libraries -->
+            <div class="glass-card skills-category">
+                <h3 class="skills-category-title">
+                    <i data-lucide="library"></i> Frameworks & Libs
+                </h3>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <i data-lucide="binary"></i>
+                        <span class="skill-name">NumPy</span>
+                    </div>
+                    <div class="skill-card">
+                        <i data-lucide="table"></i>
+                        <span class="skill-name">Pandas</span>
+                    </div>
+                    <div class="skill-card">
+                        <i data-lucide="bar-chart-3"></i>
+                        <span class="skill-name">Matplotlib</span>
+                    </div>
+                    <div class="skill-card">
+                        <i data-lucide="cpu"></i>
+                        <span class="skill-name">Scikit-learn</span>
+                    </div>
+                    <div class="skill-card">
+                        <i data-lucide="layout"></i>
+                        <span class="skill-name">Bootstrap</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 3: Tools & Platforms -->
+            <div class="glass-card skills-category">
+                <h3 class="skills-category-title">
+                    <i data-lucide="settings"></i> Outils & Bases
+                </h3>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <i data-lucide="git-branch"></i>
+                        <span class="skill-name">Git</span>
+                    </div>
+                    <div class="skill-card">
+                        <i data-lucide="github"></i>
+                        <span class="skill-name">GitHub</span>
+                    </div>
+                    <div class="skill-card">
+                        <i data-lucide="terminal"></i>
+                        <span class="skill-name">VS Code</span>
+                    </div>
+                    <div class="skill-card">
+                        <i data-lucide="book-open"></i>
+                        <span class="skill-name">Notion</span>
+                    </div>
+                    <div class="skill-card">
+                        <i data-lucide="server"></i>
+                        <span class="skill-name">MySQL</span>
+                    </div>
+                    <div class="skill-card">
+                        <i data-lucide="file-text"></i>
+                        <span class="skill-name">Jupyter</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       PROJECTS SECTION
+       ========================================================================== -->
+    <section id="projects">
+        <div class="section-header animate-on-scroll">
+            <span class="section-tag">Réalisations</span>
+            <h2 class="section-title">Mes Projets Récents</h2>
+            <p class="section-desc">Une sélection d'applications pratiques et de projets de recherche que j'ai développés.</p>
+        </div>
+
+        <div class="projects-grid animate-on-scroll">
+
+            <!-- Project 1: Notion Dashboard -->
+            <div class="glass-card project-card">
+                <div class="project-img-container">
+                    <img src="assets/notion-dashboard.png" alt="Notion Dashboard Project Image">
+                    <span class="project-badge">Organisation</span>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Dashboard Notion</h3>
+                    <p class="project-desc">
+                        Un système complet de productivité personnelle. Permet la gestion hiérarchique des tâches, le suivi d'objectifs académiques et professionnels avec gestion des priorités et calendrier dynamique.
+                    </p>
+                    <div class="project-tags">
+                        <span class="project-tag">Notion API</span>
+                        <span class="project-tag">Productivité</span>
+                        <span class="project-tag">Gestion</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/yahyeh-abdi" target="_blank" rel="noopener noreferrer" class="btn-link">
+                            <i data-lucide="github"></i> Code GitHub
+                        </a>
+                        <a href="#" class="btn-link">
+                            <i data-lucide="external-link"></i> Démo Live
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2: Portfolio Personnel -->
+            <div class="glass-card project-card">
+                <div class="project-img-container">
+                    <img src="assets/portfolio-preview.png" alt="Portfolio Personnel Project Image">
+                    <span class="project-badge">Web Design</span>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Portfolio Personnel</h3>
+                    <p class="project-desc">
+                        Un site web entièrement responsive inspiré des designs épurés d'Apple et Vercel. Il propose un mode clair/sombre, des animations fluides sur canevas et une responsivité totale.
+                    </p>
+                    <div class="project-tags">
+                        <span class="project-tag">HTML5</span>
+                        <span class="project-tag">CSS3 Vanilla</span>
+                        <span class="project-tag">JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/yahyeh-abdi" target="_blank" rel="noopener noreferrer" class="btn-link">
+                            <i data-lucide="github"></i> Code GitHub
+                        </a>
+                        <a href="#" class="btn-link">
+                            <i data-lucide="external-link"></i> Démo Live
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3: Analyse de données -->
+            <div class="glass-card project-card">
+                <div class="project-img-container">
+                    <img src="assets/data-analysis.png" alt="Analyse de données Project Image">
+                    <span class="project-badge">Data Science</span>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Analyse de Données</h3>
+                    <p class="project-desc">
+                        Un projet de data mining et de visualisation de données complexes. Utilisation de Python pour le nettoyage exploratoire des données, les statistiques descriptives et la création de visualisations percutantes.
+                    </p>
+                    <div class="project-tags">
+                        <span class="project-tag">Python</span>
+                        <span class="project-tag">Pandas</span>
+                        <span class="project-tag">Matplotlib</span>
+                        <span class="project-tag">Seaborn</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/yahyeh-abdi" target="_blank" rel="noopener noreferrer" class="btn-link">
+                            <i data-lucide="github"></i> Code GitHub
+                        </a>
+                        <a href="#" class="btn-link">
+                            <i data-lucide="external-link"></i> Démo Live
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 4: Machine Learning -->
+            <div class="glass-card project-card">
+                <div class="project-img-container">
+                    <img src="assets/machine-learning.png" alt="Machine Learning Project Image">
+                    <span class="project-badge">Machine Learning</span>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Modèle Prédictif ML</h3>
+                    <p class="project-desc">
+                        Conception et entraînement d'un modèle d'apprentissage supervisé de classification/régression. Optimisation des hyperparamètres, ingénierie des fonctionnalités (feature engineering) et évaluation fine des métriques.
+                    </p>
+                    <div class="project-tags">
+                        <span class="project-tag">Scikit-learn</span>
+                        <span class="project-tag">Python</span>
+                        <span class="project-tag">Modélisation</span>
+                        <span class="project-tag">MLOps</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/yahyeh-abdi" target="_blank" rel="noopener noreferrer" class="btn-link">
+                            <i data-lucide="github"></i> Code GitHub
+                        </a>
+                        <a href="#" class="btn-link">
+                            <i data-lucide="external-link"></i> Démo Live
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       CAREER (TIMELINE) SECTION
+       ========================================================================== -->
+    <section id="career">
+        <div class="section-header animate-on-scroll">
+            <span class="section-tag">Parcours</span>
+            <h2 class="section-title">Mon Expérience & Formations</h2>
+            <p class="section-desc">Une chronologie de mes études académiques, de mes réalisations et de mes ambitions.</p>
+        </div>
+
+        <div class="timeline-container animate-on-scroll">
+            
+            <!-- Timeline Item 1: Current Education -->
+            <div class="timeline-item left">
+                <div class="timeline-bullet"></div>
+                <div class="glass-card timeline-card">
+                    <span class="timeline-date">2024 - Présent</span>
+                    <h3 class="timeline-title">Études en Intelligence Artificielle</h3>
+                    <h4 class="timeline-subtitle">Université & Spécialité Data Science</h4>
+                    <p class="timeline-desc">
+                        Formation théorique et pratique approfondie sur l'apprentissage automatique, les structures de données, l'optimisation mathématique et l'intelligence artificielle générative.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Timeline Item 2: Certifications -->
+            <div class="timeline-item right">
+                <div class="timeline-bullet"></div>
+                <div class="glass-card timeline-card">
+                    <span class="timeline-date">2023 - 2024</span>
+                    <h3 class="timeline-title">Certifications & Formations Web/Python</h3>
+                    <h4 class="timeline-subtitle">Auto-formation (Coursera, Udemy)</h4>
+                    <p class="timeline-desc">
+                        Validation de plusieurs parcours de spécialisation en programmation Python orientée Data Science, requêtes SQL complexes et développement d'interfaces web responsives.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Timeline Item 3: Secondary Education -->
+            <div class="timeline-item left">
+                <div class="timeline-bullet"></div>
+                <div class="glass-card timeline-card">
+                    <span class="timeline-date">2021 - 2023</span>
+                    <h3 class="timeline-title">Baccalauréat Scientifique</h3>
+                    <h4 class="timeline-subtitle">Mention Mathématiques & Informatique</h4>
+                    <p class="timeline-desc">
+                        Acquisition d'une solide base logique, mathématique et méthodologique qui m'a conduit naturellement vers la science des données et le codage.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Timeline Item 4: Future Aims -->
+            <div class="timeline-item right">
+                <div class="timeline-bullet"></div>
+                <div class="glass-card timeline-card">
+                    <span class="timeline-date">Futur</span>
+                    <h3 class="timeline-title">Stage & Poste : AI/Data Scientist</h3>
+                    <h4 class="timeline-subtitle">Recherche active d'opportunités</h4>
+                    <p class="timeline-desc">
+                        Souhaite intégrer une équipe innovante pour appliquer mes compétences techniques en entreprise, apprendre des experts de l'industrie et concevoir des solutions performantes.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       CONTACT SECTION
+       ========================================================================== -->
+    <section id="contact">
+        <div class="section-header animate-on-scroll">
+            <span class="section-tag">Me Contacter</span>
+            <h2 class="section-title">Discutons de vos projets</h2>
+            <p class="section-desc">N'hésitez pas à m'envoyer un message pour toute opportunité professionnelle ou question technique.</p>
+        </div>
+
+        <div class="contact-grid">
+            
+            <div class="contact-info animate-on-scroll">
+                
+                <div class="glass-card contact-card">
+                    <div class="contact-icon-box">
+                        <i data-lucide="mail"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h4>E-mail professionnel</h4>
+                        <p><a href="mailto:yahyestudent@gmail.com">yahyestudent@gmail.com</a></p>
+                    </div>
+                </div>
+
+                <div class="glass-card contact-card">
+                    <div class="contact-icon-box">
+                        <i data-lucide="map-pin"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h4>Localisation actuelle</h4>
+                        <p>France / Disponible à distance</p>
+                    </div>
+                </div>
+
+                <div class="glass-card contact-card">
+                    <div class="contact-icon-box">
+                        <i data-lucide="link"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h4>Mes profils en ligne</h4>
+                        <div class="social-links">
+                            <a href="https://linkedin.com/in/yahye-abdourahman-abdi" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="LinkedIn Profile">
+                                <i data-lucide="linkedin"></i>
+                            </a>
+                            <a href="https://github.com/yahyenanti22" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="GitHub Profile">
+                                <i data-lucide="github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="glass-card contact-form-container animate-on-scroll delay-200">
+                <form id="contact-form">
+                    <div class="form-group-row">
+                        <div class="form-group">
+                            <label for="form-name" class="form-label">Nom Complet</label>
+                            <input type="text" id="form-name" class="form-input" placeholder="Ex: Jean Dupont" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="form-email" class="form-label">Adresse Email</label>
+                            <input type="email" id="form-email" class="form-input" placeholder="Ex: jean.dupont@email.com" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="form-subject" class="form-label">Sujet</label>
+                        <input type="text" id="form-subject" class="form-input" placeholder="Ex: Opportunité de Stage" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="form-message-body" class="form-label">Votre Message</label>
+                        <textarea id="form-message-body" class="form-input" placeholder="Rédigez votre message ici..." required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">
+                        <i data-lucide="send"></i> Envoyer le message
+                    </button>
+
+                    <div id="form-message" class="form-message"></div>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                YAA<span>.</span>
+            </div>
+            <div class="footer-copy">
+                &copy; 2026 Yahyeh Abdourahman Abdi. Tous droits réservés.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="back-to-top" aria-label="Remonter en haut de page">
+        <i data-lucide="arrow-up"></i>
+    </button>
+
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        // Init Lucide Icons in HTML
+        lucide.createIcons();
+    </script>
+    <!-- JavaScript logic -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -421,59 +421,42 @@ function initScrollToTop() {
 function initContactForm() {
     const form = document.getElementById('contact-form');
     const formMessage = document.getElementById('form-message');
-    
+
     if (!form || !formMessage) return;
 
     form.addEventListener('submit', (e) => {
         e.preventDefault();
 
-        const nameInput = document.getElementById('form-name');
-        const emailInput = document.getElementById('form-email');
-        const subjectInput = document.getElementById('form-subject');
-        const messageInput = document.getElementById('form-message-body');
         const submitBtn = form.querySelector('button[type="submit"]');
+        const originalText = submitBtn.innerHTML;
 
-        // Simple validation
-        if (!nameInput.value.trim() || !emailInput.value.trim() || !subjectInput.value.trim() || !messageInput.value.trim()) {
-            showFeedback('Veuillez remplir tous les champs du formulaire.', 'error');
-            return;
-        }
-
-        // Email regex check
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(emailInput.value.trim())) {
-            showFeedback('Veuillez entrer une adresse email valide.', 'error');
-            return;
-        }
-
-        // Change button state
-        const originalBtnText = submitBtn.innerHTML;
         submitBtn.disabled = true;
-        submitBtn.innerHTML = 'Envoi en cours...';
+        submitBtn.innerHTML = "Envoi en cours...";
 
-        // Simulate API post delay
-        setTimeout(() => {
-            submitBtn.disabled = false;
-            submitBtn.innerHTML = originalBtnText;
+        const formData = new FormData(form);
 
-            // Reset form and show success
+        fetch("/", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded"
+            },
+            body: new URLSearchParams(formData).toString()
+        })
+        .then(() => {
+            formMessage.textContent = "✅ Votre message a été envoyé avec succès.";
+            formMessage.className = "form-message success";
+
             form.reset();
-            showFeedback('Votre message a été envoyé avec succès ! Merci de me contacter, je vous répondrai bientôt.', 'success');
-        }, 1500);
+
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalText;
+        })
+        .catch(() => {
+            formMessage.textContent = "❌ Une erreur est survenue.";
+            formMessage.className = "form-message error";
+
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalText;
+        });
     });
-
-    function showFeedback(text, type) {
-        formMessage.textContent = text;
-        formMessage.className = 'form-message ' + type;
-        
-        // Auto scroll to message
-        formMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-
-        // Remove feedback warning message after 6 seconds
-        if (type === 'success') {
-            setTimeout(() => {
-                formMessage.style.display = 'none';
-            }, 6000);
-        }
-    }
 }

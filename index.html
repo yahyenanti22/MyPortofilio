@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yahyeh Abdourahman Abdi | Portfolio AI & Data Science</title>
+    <title>Yahyeh Abdourahman Abdi | Portfolio AI & Data Analysis</title>
     
     <!-- Meta SEO -->
     <meta name="description" content="Portfolio professionnel de Yahyeh Abdourahman Abdi, étudiant en Intelligence Artificielle et Science des Données, développeur Python et passionné de Machine Learning.">
@@ -12,9 +12,9 @@
     
     <!-- Open Graph / LinkedIn -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://yahyeh-abdi.github.io/">
-    <meta property="og:title" content="Yahyeh Abdourahman Abdi | Portfolio AI & Data Science">
-    <meta property="og:description" content="Découvrez mes compétences en Machine Learning, Python, SQL et mes projets innovants en Science des Données.">
+    <meta property="og:url" content="https://yahyenanti22.github.io/">
+    <meta property="og:title" content="Yahyeh Abdourahman Abdi | Portfolio AI & Data Analysis">
+    <meta property="og:description" content="Découvrez mes compétences en Data Analysis, Python, SQL et mes projets innovants en Analyse des Données.">
     <meta property="og:image" content="assets/portfolio-preview.png">
 
 
@@ -89,13 +89,13 @@
         <div class="hero-content animate-on-scroll">
             <span class="hero-pretitle">Bonjour, je suis</span>
             <h1 class="hero-name">Yahyeh <span>Abdourahman Abdi</span></h1>
-            <h2 class="hero-title">AI & Data Science Student | Machine Learning Enthusiast | Python Developer</h2>
+            <h2 class="hero-title">AI & Data Analysis</h2>
             <p class="hero-desc">
                 Passionné par l'extraction de connaissances à partir des données et le développement de modèles prédictifs intelligents. Prêt à relever des défis concrets dans l'industrie technologique.
             </p>
             <div class="hero-buttons">
                 <!-- Resume Download (Target blank placeholder for local download) -->
-                <a href="#" class="btn btn-primary" download="CV_Yahyeh_Abdourahman_Abdi.pdf">
+                <a href="assets/CV_Yahyeh_Abdourahman_Abdi.pdf" class="btn btn-primary" download="CV_Yahyeh_Abdourahman_Abdi.pdf">
                     <i data-lucide="download"></i> Télécharger le CV
                 </a>
                 <a href="#projects" class="btn btn-secondary">
@@ -496,7 +496,7 @@
                         <i data-lucide="mail"></i>
                     </div>
                     <div class="contact-details">
-                        <h4>E-mail professionnel</h4>
+                        <h4>E-mail </h4>
                         <p><a href="mailto:yahyestudent@gmail.com">yahyestudent@gmail.com</a></p>
                     </div>
                 </div>
@@ -507,7 +507,7 @@
                     </div>
                     <div class="contact-details">
                         <h4>Localisation actuelle</h4>
-                        <p>France / Disponible à distance</p>
+                        <p>Djibouti</p>
                     </div>
                 </div>
 
@@ -531,32 +531,78 @@
             </div>
 
             <div class="glass-card contact-form-container animate-on-scroll delay-200">
-                <form id="contact-form">
-                    <div class="form-group-row">
-                        <div class="form-group">
-                            <label for="form-name" class="form-label">Nom Complet</label>
-                            <input type="text" id="form-name" class="form-input" placeholder="Ex: Jean Dupont" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="form-email" class="form-label">Adresse Email</label>
-                            <input type="email" id="form-email" class="form-input" placeholder="Ex: jean.dupont@email.com" required>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="form-subject" class="form-label">Sujet</label>
-                        <input type="text" id="form-subject" class="form-input" placeholder="Ex: Opportunité de Stage" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="form-message-body" class="form-label">Votre Message</label>
-                        <textarea id="form-message-body" class="form-input" placeholder="Rédigez votre message ici..." required></textarea>
-                    </div>
-                    
-                    <button type="submit" class="btn btn-primary">
-                        <i data-lucide="send"></i> Envoyer le message
-                    </button>
+                <form
+    id="contact-form"
+    name="contact"
+    method="POST"
+    data-netlify="true"
+    netlify-honeypot="bot-field"
+    action="/merci.html">
 
-                    <div id="form-message" class="form-message"></div>
-                </form>
+    <!-- Obligatoire pour Netlify -->
+    <input type="hidden" name="form-name" value="contact">
+
+    <!-- Anti-spam -->
+    <p hidden>
+        <label>
+            Ne pas remplir ce champ :
+            <input name="bot-field">
+        </label>
+    </p>
+
+    <div class="form-group-row">
+        <div class="form-group">
+            <label for="form-name" class="form-label">Nom Complet</label>
+            <input
+                type="text"
+                id="form-name"
+                name="name"
+                class="form-input"
+                placeholder="Ex: yahye"
+                required>
+        </div>
+
+        <div class="form-group">
+            <label for="form-email" class="form-label">Adresse Email</label>
+            <input
+                type="email"
+                id="form-email"
+                name="email"
+                class="form-input"
+                placeholder="Ex: jean.dupont@email.com"
+                required>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="form-subject" class="form-label">Sujet</label>
+        <input
+            type="text"
+            id="form-subject"
+            name="subject"
+            class="form-input"
+            placeholder="Ex: Opportunité de Stage"
+            required>
+    </div>
+
+    <div class="form-group">
+        <label for="form-message-body" class="form-label">Votre Message</label>
+        <textarea
+            id="form-message-body"
+            name="message"
+            class="form-input"
+            placeholder="Rédigez votre message ici..."
+            required></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">
+        <i data-lucide="send"></i>
+        Envoyer le message
+    </button>
+
+    <div id="form-message" class="form-message"></div>
+
+</form>
             </div>
 
         </div>

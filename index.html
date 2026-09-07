@@ -546,7 +546,96 @@
             </div>
         </div>
     </footer>
+    <!-- CHATBOT -->
+<div class="chatbot-container">
 
+    <button
+        id="chatbotToggle"
+        class="chatbot-toggle"
+        aria-label="Ouvrir le chatbot"
+    >
+        💬
+    </button>
+
+
+    <div
+        id="chatbotWindow"
+        class="chatbot-window"
+    >
+
+        <div class="chatbot-header">
+
+            <div>
+                <div class="chatbot-title">
+                    Assistant de Yahye
+                </div>
+
+                <div class="chatbot-status">
+                    ● Disponible
+                </div>
+            </div>
+
+            <button
+                id="chatbotClose"
+                class="chatbot-close"
+                aria-label="Fermer"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <div
+            id="chatbotMessages"
+            class="chatbot-messages"
+        >
+
+            <div class="chat-message bot-message">
+                Bonjour 👋
+
+                Je suis l'assistant personnel de Yahye.
+
+                Je peux vous renseigner sur son parcours,
+                ses compétences, ses projets, sa formation
+                et ses objectifs.
+
+                Que souhaitez-vous savoir ?
+            </div>
+
+        </div>
+
+
+        <form
+            id="chatbotForm"
+            class="chatbot-form"
+        >
+
+            <input
+                id="chatbotInput"
+                class="chatbot-input"
+                type="text"
+                placeholder="Posez votre question..."
+                autocomplete="off"
+                maxlength="1000"
+            >
+
+            <button
+                class="chatbot-send"
+                type="submit"
+                aria-label="Envoyer"
+            >
+                ➤
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="css/chatbot.css">
+<script src="js/chatbot.js"></script>
     <!-- Scroll to Top Button -->
     <button id="back-to-top" aria-label="Remonter en haut de page">
         <i data-lucide="arrow-up"></i>

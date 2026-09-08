@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "@netlify/functions": "latest"
+    "openai": "^5.0.0",
+    "@netlify/functions": "^4.0.0"
   }
 }

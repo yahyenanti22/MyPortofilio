@@ -320,22 +320,18 @@ export default async (request) => {
 
     } catch (error) {
 
-        console.error(
-            "Erreur OpenAI :",
-            error
-        );
+    console.error("Erreur OpenAI :", error);
 
-
-        return new Response(
-            JSON.stringify({
-                error: "Erreur lors de la communication avec OpenAI."
-            }),
-            {
-                status: 500,
-                headers: {
-                    "Content-Type": "application/json"
-                }
+    return new Response(
+        JSON.stringify({
+            error: error.message || "Erreur OpenAI inconnue."
+        }),
+        {
+            status: 500,
+            headers: {
+                "Content-Type": "application/json"
             }
-        );
-    }
+        }
+    );
+}
 };
